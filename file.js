@@ -87,7 +87,7 @@ trivia().then(() => {
                                 }
                                 playagain.style.display = 'block'
                                 playagain.onclick = function(){
-                                    window.location.href = 'create.html'
+                                    window.location.href = 'index.html'
                                 }
                             }
         
