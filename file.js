@@ -6,8 +6,10 @@ const question = document.getElementById("question")
 const answers = document.getElementsByClassName("answer")
 const score = document.getElementById("score")
 const playagain = document.getElementById("playagain")
-let URL = JSON.parse(localStorage.getItem('url'));
+let URL = localStorage.getItem('url');
 let triviaAPI;
+
+console.log(URL)
 
 // RESET SCORE 
 
@@ -122,26 +124,26 @@ if(game){
 else{
     submit = document.getElementById("submit")
     
-    setTimeout(() => {
-        submit.onclick = function(){
+    submit.onclick = function(){
+        
+        let API_URL = 'https://opentdb.com/api.php?type=multiple'; 
+    
+        const category = document.getElementById("category").value;
+        const questions = document.getElementById("questions").value;
+        const difficulty = document.getElementById("difficulty").value;
+    
+        console.log(category, questions, difficulty);
+    
+        if (category != 'any') {
+            API_URL += `&category=${category}`;
+        }
+        API_URL += `&amount=${questions}`;
+        API_URL += `&difficulty=${difficulty}`;
+    
+        localStorage.setItem('url', API_URL); 
 
-            let API_URL = 'https://opentdb.com/api.php?type=multiple'
+    }
     
-            const category = document.getElementById("category").value
-            const questions = document.getElementById("questions").value
-            const difficulty = document.getElementById("difficulty").value
-    
-            console.log(category, questions, difficulty)
-    
-            if(category != 'any'){
-                API_URL += `&category=${category}`
-            }
-            API_URL += `&amount=${questions}`
-            API_URL += `&difficulty=${difficulty}`
-    
-            localStorage.setItem('url', JSON.stringify(API_URL));
     
         }
-    }, 2000);
 
-}
