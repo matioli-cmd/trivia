@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html style="background-color: rgb(255, 255, 255);">
+<html>
     <head>
         <title>test</title>
-        <link rel="stylesheet" href="create.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="create.css">
     </head>
+
     
     <body>
-        <h1 align="center">Create your Trivia!</h1>
+        <h1 align="center">Trivia Create</h1>
 
         <form action="game.html">
             
             <div id="container">
 
 
-                <label for="questions">Amount of Questions:</label>
+                <label for="questions">Amount of questions:</label>
                 <input id="questions" type="number" min="1" max="50" value="1" required>
             
                 <label for="category">Category:</label>
@@ -53,8 +54,8 @@
                     <option value="medium">Medium</option>
                     <option value="hard">Hard</option>
                 </select>
-                
-                <input id='submit' type="submit">
+            
+                <button id="submit">Play</button>
             
            
         </div>
