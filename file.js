@@ -1,4 +1,5 @@
 const game = document.getElementById('game')
+let loadingInterval;
 
 function main(){
 
@@ -30,6 +31,8 @@ async function trivia(){
 }
 
 trivia().then(() => {
+
+    clearInterval(loadingInterval)
 
     let questionNumber = 0
 
@@ -110,8 +113,22 @@ trivia().then(() => {
                 }
         }
         catch(error){
-            console.log(error)
-            main()
+
+            question.textContent = 'Loading'
+            loadingInterval = setInterval(() => {
+                if(question.textContent == 'Loading...'){
+                    question.textContent == 'Loading'
+                }
+                else{
+                    question.textContent += '.'
+                }
+            }, 1000)
+            for(let answer of answers){
+                answer.style.visibility = 'hidden'
+            }
+            setTimeout(() => {
+                main()
+             }, 3000);
         }
 
 
@@ -128,9 +145,17 @@ ChangeQuestion()
 }
 
 if(game){
+    loadingInterval = setInterval(() => {
+        if(question.textContent == 'Loading...'){
+            question.textContent == 'Loading'
+        }
+        else{
+            question.textContent += '.'
+        }
+    }, 1000)
     setTimeout(() => {
-        main()
-    }, 2500);
+       main()
+    }, 3000);
 }
 else{
     
@@ -158,4 +183,6 @@ else{
     
     
         }
+
+
 
