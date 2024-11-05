@@ -19,7 +19,7 @@ h1{
 #container label,
 #container input,
 #container select {
-    width: 20%; 
+    width: auto; 
     border-radius: 5px;
     border: hidden;
 }
