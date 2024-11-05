@@ -35,6 +35,12 @@ trivia().then(() => {
 
     triviaINFO = triviaAPI.results
 
+    function Decode(question){
+        let temporary = document.createElement('div')
+        temporary.innerHTML = question
+        return temporary.innerText
+    }
+
     function ChangeQuestion(){
 
         question.style.visibility = 'visible'
@@ -47,16 +53,19 @@ trivia().then(() => {
 
                 let choices = []
                 
-                question.textContent = triviaINFO[questionNumber].question
-        
-                // CHOICES //
+                question.textContent = Decode(triviaINFO[questionNumber].question)
         
                 for(let incorrect of triviaINFO[questionNumber].incorrect_answers){
                     choices.push(incorrect)
         
                 }
                 choices.push(triviaINFO[questionNumber].correct_answer)
-        
+
+                for (let i = choices.length - 1; i > 0; i--) {
+                    const random_num = Math.floor(Math.random() * (i + 1));
+                    [choices[i], choices[random_num]] = [choices[random_num], choices[i]];
+                }
+
                 choices.sort(() => Math.random() - 0.5)
         
                 const correctAnswer = triviaINFO[questionNumber].correct_answer
@@ -100,7 +109,8 @@ trivia().then(() => {
         
                 }
         }
-        catch{
+        catch(error){
+            console.log(error)
             main()
         }
 
@@ -118,10 +128,12 @@ ChangeQuestion()
 }
 
 if(game){
-    console.log("Yes game")
-    main()
+    setTimeout(() => {
+        main()
+    }, 2500);
 }
 else{
+    
     submit = document.getElementById("submit")
     
     submit.onclick = function(){
