@@ -1,12 +1,47 @@
 #container {
     display: flex;
-    flex-direction: column; /* Stack children vertically */
-    gap: 15px; /* Space between elements */
+    flex-direction: column; 
+    gap: 20px; 
     align-items: center;
+}
+
+label{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 50px;
 }
 
 #container label,
 #container input,
 #container select {
-    width: 20%; /* Makes inputs/selects fill the container */
+    width: 20%; 
+    border-radius: 5px;
+    border: hidden;
+}
+
+html{
+    background-color: rgb(35, 35, 35);
+}
+
+#submit{
+    padding: 5px;
+    font-size: 35px;
+    border-radius: 10px;
+    border: hidden;
+    background-color: rgb(71, 69, 69);
+    width: 140px;
+    color: rgb(213, 213, 213);
+    font-weight: bold;
+}
+#submit:hover{
+    background-color: rgb(57, 58, 58);
+     color: rgb(213, 213, 213);
+}
+#submit:active{
+    background-color: rgb(71, 69, 69);
 }
