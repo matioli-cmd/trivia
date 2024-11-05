@@ -1,11 +1,25 @@
-
+html{
+    background-color: rgb(35, 35, 35);
+}
 .answer{
     padding: 20px;
     font-size: 20px;
     display: inline-block;
     margin: 10px;
-    width: auto;
+    width: 40%;
+    visibility: hidden;
 }
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+#question{
+    font-size: 30px;
+    
+}
+
 
 .button-container {
     display: flex;
@@ -18,5 +32,30 @@
     font-size: 40px;
     display: none;
     margin: 0 auto;
+}
+
+#answer1{
+    background-color: rgb(193, 71, 71);
+    border: hidden;
+    color: white;
+    font-size: 25px;
+}
+#answer2{
+    background-color: rgb(51, 153, 201);
+    border: hidden;
+    color: white;
+    font-size: 25px;
+}
+#answer3{
+    background-color: rgb(63, 172, 67);
+    border: hidden;
+    color: white;
+    font-size: 25px;
+}
+#answer4{
+    background-color: rgb(201, 141, 55);
+    border: hidden;
+    color: white;
+    font-size: 25px;
 }
 
