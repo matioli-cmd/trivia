@@ -6,6 +6,7 @@ function main(){
 const question = document.getElementById("question")
 const answers = document.getElementsByClassName("answer")
 const score = document.getElementById("score")
+const scoreholder = document.getElementById("scoreholder")
 const playagain = document.getElementById("playagain")
 let URL = localStorage.getItem('url');
 let triviaAPI;
@@ -50,6 +51,8 @@ trivia().then(() => {
         for(let answer of answers){
             answer.style.visibility = 'visible'
         }
+        scoreholder.style.visibility = 'visible'
+        score.style.visibility = 'visible'
 
         try{
             if(questionNumber != triviaINFO.length){
