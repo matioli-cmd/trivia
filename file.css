@@ -1,13 +1,29 @@
 html{
     background-color: rgb(35, 35, 35);
 }
-.answer{
+.answer {
     padding: 20px;
     font-size: 20px;
     display: inline-block;
     margin: 10px;
-    width: 40%;
+    min-width: 20%;
+    max-width: 35%;
     visibility: hidden;
+}
+
+/* When the screen width is 768px or smaller */
+@media (max-width: 768px) {
+    .answer {
+        min-width: 60%;
+    }
+}
+
+/* When the screen width is 480px or smaller */
+@media (max-width: 480px) {
+    .answer {
+        min-width: 40%; /* Further adjust min-width for extra small screens */
+        max-width: 60%; /* Further adjust max-width for extra small screens */
+    }
 }
 
 h1{
@@ -58,4 +74,3 @@ h1{
     color: white;
     font-size: 25px;
 }
-
