@@ -1,6 +1,10 @@
 html{
     background-color: rgb(35, 35, 35);
 }
+#question{
+    font-size: 30px;
+    
+}
 .answer {
     padding: 20px;
     font-size: 20px;
@@ -12,24 +16,29 @@ html{
 
 @media (max-width: 768px) {
     .answer {
-        width: 75%;
+        min-width: 75%;
     }
 }
 
 @media (max-width: 480px) {
     .answer {
-        width: 100%;
+        min: 100%;
+    }
+}
+@media (max-height: 650px) {
+    .answer {
+        padding: 5px;
+        font-size: 10px;
+
+    }
+    #question{
+        font-size: 25px;
     }
 }
 
 h1{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-}
-
-#question{
-    font-size: 30px;
-    
 }
 
 
