@@ -35,13 +35,14 @@ html{
     border: hidden;
     background-color: rgb(71, 69, 69);
     width: 140px;
-    color: rgb(213, 213, 213);
+    color: rgb(255, 255, 255);
     font-weight: bold;
 }
 #submit:hover{
-    background-color: rgb(57, 58, 58);
-     color: rgb(213, 213, 213);
+    background-color: rgb(57, 56, 56);
 }
 #submit:active{
     background-color: rgb(71, 69, 69);
 }
+
+
