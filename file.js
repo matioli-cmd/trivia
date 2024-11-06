@@ -32,29 +32,33 @@ async function trivia(){
 }
 
 trivia().then(() => {
-
-    clearInterval(loadingInterval)
-
-    let questionNumber = 0
-
-    triviaINFO = triviaAPI.results
-
-    function Decode(question){
-        let temporary = document.createElement('div')
-        temporary.innerHTML = question
-        return temporary.innerText
-    }
-
-    function ChangeQuestion(){
-
-        question.style.visibility = 'visible'
-        for(let answer of answers){
-            answer.style.visibility = 'visible'
-        }
-        scoreholder.style.visibility = 'visible'
-        score.style.visibility = 'visible'
+    
 
         try{
+            if(triviaAPI.results[0].question){
+                
+            clearInterval(loadingInterval)
+        
+            let questionNumber = 0
+        
+            triviaINFO = triviaAPI.results
+        
+            function Decode(question){
+                let temporary = document.createElement('div')
+                temporary.innerHTML = question
+                return temporary.innerText
+            }
+        
+            function ChangeQuestion(){
+        
+        
+                question.style.visibility = 'visible'
+                for(let answer of answers){
+                    answer.style.visibility = 'visible'
+                }
+                scoreholder.style.visibility = 'visible'
+                score.style.visibility = 'visible'
+            
             if(questionNumber != triviaINFO.length){
 
                 let choices = []
@@ -115,41 +119,46 @@ trivia().then(() => {
         
                 }
         }
-        catch(error){
-
-            question.textContent = 'Loading'
-            loadingInterval = setInterval(() => {
-                if(question.textContent == 'Loading...'){
-                    question.textContent == 'Loading'
-                }
-                else{
-                    question.textContent += '.'
-                }
-            }, 1000)
-            for(let answer of answers){
-                answer.style.visibility = 'hidden'
-            }
-            scoreholder.style.visibility = 'hidden'
-            score.style.visibility = 'hidden'
-            setTimeout(() => {
-                main()
-             }, 3000);
-        }
 
 
-
+    }
+    else{
+        console.log("Empty")
     }
 
 
 
 ChangeQuestion()
 }
-
-)
-
+catch(error){
+    console.log(error)
+    question.textContent = 'Loading'
+    loadingInterval = setInterval(() => {
+        if(question.textContent == 'Loading...'){
+            question.textContent == 'Loading'
+        }
+        else{
+            question.textContent += '.'
+        }
+    }, 1000)
+    for(let answer of answers){
+        answer.style.visibility = 'hidden'
+    }
+    scoreholder.style.visibility = 'hidden'
+    score.style.visibility = 'hidden'
+    setTimeout(() => {
+        clearInterval(loadingInterval)
+        main()
+     }, 3000);
 }
 
+})}
+
+    
+
+
 if(game){
+    
     loadingInterval = setInterval(() => {
         if(question.textContent == 'Loading...'){
             question.textContent == 'Loading'
@@ -159,6 +168,7 @@ if(game){
         }
     }, 1000)
     setTimeout(() => {
+       clearInterval(loadingInterval)
        main()
     }, 3000);
 }
@@ -167,6 +177,8 @@ else{
     submit = document.getElementById("submit")
     
     submit.onclick = function(){
+
+        let triviaAPItest 
         
         let API_URL = 'https://opentdb.com/api.php?type=multiple'; 
     
@@ -183,6 +195,9 @@ else{
         API_URL += `&difficulty=${difficulty}`;
     
         localStorage.setItem('url', API_URL); 
+
+        window.location.href = 'game.html'
+
 
     }
     
