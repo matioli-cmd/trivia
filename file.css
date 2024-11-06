@@ -85,3 +85,8 @@ h1{
     color: white;
     font-size: 25px;
 }
+
+#scoreholder, #score{
+    visibility: hidden;
+}
+
