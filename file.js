@@ -76,7 +76,7 @@ trivia().then(() => {
                 let i = 0
                 for(let answer of answers){
         
-                    answer.textContent = choices[i]
+                    answer.textContent = Decode(choices[i])
                     i++}  
                 
                 for(let answer of answers){
@@ -183,6 +183,4 @@ else{
     
     
         }
-
-
 
