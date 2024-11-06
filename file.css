@@ -18,7 +18,7 @@ html{
 
 @media (max-width: 480px) {
     .answer {
-        width: 40%;
+        width: 100%;
     }
 }
 
