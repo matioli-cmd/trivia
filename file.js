@@ -129,6 +129,8 @@ trivia().then(() => {
             for(let answer of answers){
                 answer.style.visibility = 'hidden'
             }
+            scoreholder.style.visibility = 'hidden'
+            score.style.visibility = 'hidden'
             setTimeout(() => {
                 main()
              }, 3000);
