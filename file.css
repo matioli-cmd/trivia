@@ -18,11 +18,17 @@ html{
     .answer {
         min-width: 75%;
     }
+    #question{
+        font-size: 25px;
+    }
 }
 
 @media (max-width: 480px) {
     .answer {
-        min: 100%;
+        min-width: 100%;
+    }
+    #question{
+        font-size: 25px;
     }
 }
 @media (max-height: 650px) {
