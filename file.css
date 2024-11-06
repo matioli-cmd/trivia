@@ -6,23 +6,19 @@ html{
     font-size: 20px;
     display: inline-block;
     margin: 10px;
-    min-width: 20%;
-    max-width: 35%;
+    width: 40%;
     visibility: hidden;
 }
 
-/* When the screen width is 768px or smaller */
 @media (max-width: 768px) {
     .answer {
-        min-width: 60%;
+        width: 75%;
     }
 }
 
-/* When the screen width is 480px or smaller */
 @media (max-width: 480px) {
     .answer {
-        min-width: 40%; /* Further adjust min-width for extra small screens */
-        max-width: 60%; /* Further adjust max-width for extra small screens */
+        width: 40%;
     }
 }
 
