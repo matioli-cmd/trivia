@@ -140,7 +140,7 @@ catch(error){
         else{
             question.textContent += '.'
         }
-    }, 1000)
+    }, 6000)
     for(let answer of answers){
         answer.style.visibility = 'hidden'
     }
@@ -149,7 +149,7 @@ catch(error){
     setTimeout(() => {
         clearInterval(loadingInterval)
         main()
-     }, 3000);
+     }, 6000);
 }
 
 })}
@@ -170,7 +170,7 @@ if(game){
     setTimeout(() => {
        clearInterval(loadingInterval)
        main()
-    }, 3000);
+    }, 5000);
 }
 else{
     
@@ -178,7 +178,6 @@ else{
     
     submit.onclick = function(){
 
-        let triviaAPItest 
         
         let API_URL = 'https://opentdb.com/api.php?type=multiple'; 
     
