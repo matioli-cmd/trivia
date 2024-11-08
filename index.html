@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>test</title>
+        <title>Trivia Generator</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="create.css">
@@ -9,15 +9,17 @@
 
     
     <body>
-        <h1 align="center">Trivia Creator</h1>
+        <header id="triviaheader">
+            <h1 align="center">TRIVIA CREATOR</h1>
+        </header>
             
             <div id="container">
 
 
-                <label for="questions">Amount of questions:</label>
+                <label for="questions">QUESTION AMOUNT</label>
                 <input id="questions" type="number" min="1" max="50" value="1" required>
             
-                <label for="category">Category:</label>
+                <label for="category">CATEGORY</label>
                 <select id="category">
                     <option value="any">Any Category</option>
                     <option value="9">General Knowledge</option>
@@ -33,7 +35,7 @@
                     <option value="28">Vehicles</option>
                 </select>
             
-                <label for="difficulty">Difficulty:</label>
+                <label for="difficulty">DIFFICULTY</label>
                 <select id="difficulty">
                     <option value="easy">Easy</option>
                     <option value="medium">Medium</option>
@@ -44,6 +46,8 @@
             
            
         </div>
+
+        <div id="bottom-left-text">Powered by Open Trivia Database API</div>
 
         
     </body>
