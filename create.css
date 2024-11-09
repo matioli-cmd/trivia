@@ -54,7 +54,7 @@ html{
     font-size: 35px;
     border-radius: 10px;
     border: hidden;
-    background-color:rgb(23, 23, 23);
+    background-color:rgb(50, 51, 51);
     width: 160px;
     color: rgb(255, 255, 255);
     font-weight: bold;
@@ -62,10 +62,10 @@ html{
     top: -10px;
 }
 #submit:hover{
-    background-color: rgb(57, 56, 56);
+    background-color: rgb(40, 41, 41);
 }
 #submit:active{
-    background-color: rgb(71, 69, 69);
+    background-color:rgb(50, 51, 51);
 }
 
 header {
