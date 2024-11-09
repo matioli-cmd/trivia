@@ -1,9 +1,33 @@
 html{
-    background-color: rgb(35, 35, 35);
+    background-color: rgb(23, 23, 23);
+}
+
+#bottom-left-text {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white; 
+    font-size: 14px; 
+    padding: 5px 10px; 
+    border-radius: 5px; 
 }
 #question{
     font-size: 30px;
     
+}
+
+#resultstext{
+    display: none;
+}
+
+#results{
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
 }
 .answer {
     padding: 20px;
@@ -59,7 +83,20 @@ h1{
     font-size: 40px;
     display: none;
     margin: 0 auto;
+    border-radius: 20px;
+    border: hidden;
+    font-weight: bold;
+    background-color: rgb(50, 51, 51);
+    color: white;
+    width: 400px;
 }
+#playagain:hover{
+    background-color: rgb(40, 41, 41);
+}
+#playagain:active{
+    background-color: rgb(50, 51, 51);
+}
+
 
 #answer1{
     background-color: rgb(193, 71, 71);
@@ -88,5 +125,5 @@ h1{
 
 #scoreholder, #score{
     visibility: hidden;
+    font-size: 30px;
 }
-
