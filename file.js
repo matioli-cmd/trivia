@@ -130,7 +130,6 @@ trivia().then(() => {
                                 const line = document.createElement("hr")
                                 line.style.height = '10px'
                                 line.style.backgroundColor = 'white'
-                                results.append(line)
                                 results.innerHTML += '<br>'
 
                                 let question_num = 1
@@ -144,6 +143,7 @@ trivia().then(() => {
                                         question.textContent = `${question_num}. ${Decode(triviaINFO[i].question)}`
                                         results.append(question)
                                         results.append(answer)
+                                        results.innerHTML += '<br>'
             
                                         question_num++
 
@@ -160,6 +160,7 @@ trivia().then(() => {
                                         results.append(question)
                                         results.append(yourAnswer)
                                         results.append(answer)
+                                        results.innerHTML += '<br>'
                                         
                                         question_num++
             
@@ -169,7 +170,6 @@ trivia().then(() => {
                 
                                 }
                                 results.innerHTML += '<br>'
-                                results.append(line)
                                 results.innerHTML += '<br>'
 
 
