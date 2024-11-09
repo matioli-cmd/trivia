@@ -168,6 +168,7 @@ trivia().then(() => {
                 
                 
                                 }
+                                results.innerHTML += '<br>'
                                 results.append(line)
                                 results.innerHTML += '<br>'
 
