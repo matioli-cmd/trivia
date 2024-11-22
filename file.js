@@ -34,7 +34,7 @@ async function trivia(){
 }
 
 trivia().then(() => {
-    
+
 
         try{
             if(triviaAPI.results[0].question){
@@ -253,12 +253,18 @@ else{
         const questions = document.getElementById("questions").value;
         const difficulty = document.getElementById("difficulty").value;
     
-        console.log(category, questions, difficulty);
-    
         if (category != 'any') {
             API_URL += `&category=${category}`;
         }
-        API_URL += `&amount=${questions}`;
+
+        if(isNaN(questions) || questions == '' || questions == null){
+            API_URL += '&amount=10';
+        }
+        else{
+            API_URL += `&amount=${questions}`;
+        }
+
+        
         API_URL += `&difficulty=${difficulty}`;
     
         localStorage.setItem('url', API_URL); 
